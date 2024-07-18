@@ -71,12 +71,14 @@ SECTION SLIDE
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
 }
 .section-slide-container{
     display: block;
     max-width: 80vw;
     max-height: 300px;
-    visibility: none;
+    visibility: hidden;
+    overflow: hidden;
 }
 .section-slide-container img{
     width: 100%;
@@ -92,6 +94,7 @@ SECTION BRIEF
     height: auto;
     padding: 20px;
     margin-bottom: 50px;
+    
 }
 .brief-description-container{
     max-width: 1200px;
@@ -101,17 +104,19 @@ SECTION BRIEF
     justify-content: space-around;
 }
 .brief-description-container-img{
-    padding: 20px;
     margin-top: -80px;
 }
 .brief-description-container-img img{
     max-width: 400px;
     height: auto;
 }
+.brief-description-container-txtarea{
+    overflow: hidden;
+}
 .brief-description-container-txt{
     max-width: 600px;
     padding: 20px;
-    visibility: none;
+    visibility: hidden;
 }
 .brief-description-container-txt p{
     color: #333739;
@@ -138,10 +143,11 @@ SECTION BRIEF
 /*
 SECTION PRODUCTS
 */
-.section-products{
+.section-products-container{
     max-width: 100vw;
     height: auto;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fbf6eb;
@@ -156,8 +162,8 @@ SECTION PRODUCTS
     font-style: italic;
     line-height: 1.25em;
     letter-spacing: 2px;
-    visibility: hidden;
     margin-top: -25px;
+    visibility: hidden;
 }
 .section-products-container-grid {
     max-width: 90vw;
