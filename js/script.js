@@ -26,6 +26,12 @@ revelar.reveal('.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, 
     opacity: 0,
 });
 
+revelar.reveal('.footer-button-home', {
+    duration: 1000,
+    opacity: 0,
+});
+
+
 ///
 
 function openWhatsApp() {
