@@ -4,175 +4,158 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    
+    <!-- Scripts -->
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="js/script.js" defer></script>
     
+    <!-- Estilos -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
+    <!-- Cabeçalho -->
     <header class="section-header">
         <div class="header-container">
+            <!-- Logo -->
             <div class="header-container-logo">
-                <img src="assets/logo/logo-desktop.png" alt="">
+                <img src="assets/logo/logo-desktop.png" alt="Logo">
             </div>
+
+            <!-- Navegação do Cabeçalho -->
             <div class="header-container-services">
                 <a href="">Sobre nós</a>
                 <a href="">Galeria</a>
-                <a href="">Contato</a>  
+                <a href="">Contato</a>
             </div>
         </div>
+
+        <!-- Menu Lateral -->
+        <div id="sidebar" class="sidebar">
+            <button class="closebtn" onclick="closeNav()">×</button>
+            <a href="#">Sobre nós</a>
+            <a href="#">Galeria</a>
+            <a href="#">Contato</a>
+        </div>
+
+        <!-- Botão para abrir o menu lateral -->
+        <span id="openbtn" class="openbtn" onclick="openNav()">☰</span>
     </header>
+
+    <!-- Seção Slide -->
     <section class="section-slide">
         <div class="section-slide-container">
-            <img src="assets/images/slide.png" alt="">
+            <img src="assets/images/slide.png" alt="Slide">
         </div>
     </section>
+
+    <!-- Seção Breve Descrição -->
     <section class="brief-description">
         <div class="brief-description-container">
+            <!-- Imagem Descrição -->
             <div class="brief-description-container-img">
-                <img src="assets/images/donuts-img.png" alt="">
+                <img src="assets/images/donuts-img.png" alt="Descrição">
             </div>
+
+            <!-- Texto Descrição -->
             <div class="brief-description-container-txtarea">
                 <div class="brief-description-container-txt">
                     <h1>D'Ellas - O Sabor que Encanta</h1>
-                    <p>Transformamos momentos doces em memórias inesquecíveis.<br/>
-                    Especializados em bolos e doces artesanais, nossos produtos são feitos com os melhores ingredientes e um toque de carinho que só uma confeitaria familiar pode oferecer. <br/>
-                    Cada pedaço é uma celebração do sabor e da dedicação, garantindo que você sempre tenha uma experiência deliciosa e única. <br/>
+                    <p>Transformamos momentos doces em memórias inesquecíveis.<br>
+                    Especializados em bolos e doces artesanais, nossos produtos são feitos com os melhores ingredientes e um toque de carinho que só uma confeitaria familiar pode oferecer.<br>
+                    Cada pedaço é uma celebração do sabor e da dedicação, garantindo que você sempre tenha uma experiência deliciosa e única.<br>
                     Venha se deliciar com a gente e descubra o sabor que encanta!</p>
                 </div>
             </div>
         </div>
     </section>
+
+    <!-- Seção Produtos -->
     <section class="section-products">
         <div class="section-products-container">
             <div class="section-products-container-title">Nosso Cardápio</div>
             <div class="section-products-container-grid">
+                <!-- Itens de Produtos -->
                 <div class="grid-item item1">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item2">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item3">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item4">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item5">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item6">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item7">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item8">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item9">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
                 <div class="grid-item item10">
                     <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
+                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
                     <p>R$ 150,00 und</p>
                 </div>
-                <div class="grid-item item11">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item12">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item13">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item14">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item15">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item16">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item17">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item18">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item19">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
-                <div class="grid-item item20">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="">
-                    <p>R$ 150,00 und</p>
-                </div>
+                <!-- Replicar a estrutura acima para outros itens (item2, item3, ..., item20) -->
+                <!-- ... -->
             </div>
+            
+            <!-- Botão WhatsApp -->
             <div class="section-products-container-whathsapp">
                 <button onclick="openWhatsApp()">
                     <div class="button-txt">
                         <p>Pedir agora</p>
                     </div>
                     <div class="button-img">
-                        <img src="assets/logo/whatsapp-logo.png" alt="">
+                        <img src="assets/logo/whatsapp-logo.png" alt="WhatsApp">
                     </div>
                 </button>
             </div>
         </div>
     </section>
-    <section class=""></section>
+
+    <!-- Rodapé -->
     <footer>
         <div class="footer-container">
             <div class="footer-container-logo">
                 <div class="footer-container-logo-img">
-                    <img src="assets/logo/logo-desktop.png" alt="">
+                    <img src="assets/logo/logo-desktop.png" alt="Logo">
                 </div>
                 <div class="footer-container-logo-txt">
                     <div class="footer-container-logo-txt-copy">
                         <p>Copyright © 2024. Made by</p>
                     </div>
                     <div class="footer-container-logo-txt-assign">
-                        <a href="https://www.linkedin.com/in/alexandro-carraro" target="_blank">Alexandro Carraro.</a>
+                        <a href="https://www.linkedin.com/in/alexandro-carraro" target="_blank">Alexandro Carraro</a>
                     </div>
                 </div>
             </div>

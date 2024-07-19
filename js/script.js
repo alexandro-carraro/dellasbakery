@@ -9,7 +9,7 @@ revelar.reveal('.section-slide-container', {
 
 revelar.reveal('.brief-description-container-txt', {
     origin: 'right', 
-    distance: '80%', 
+    distance: '100%', 
     duration: 5000,
     opacity: 0,
 });
@@ -39,4 +39,14 @@ function openWhatsApp() {
     const mensagem = 'Ol%C3%A1!%20Cheguei%20at%C3%A9%20aqui%20por%20meio%20do%20site,%20e%20gostaria%20de%20falar%20sobre%20os%20produtos!';
     const url = `https://wa.me/${telefone}?text=${mensagem}`;
     window.open(url, '_blank');
+}
+
+function openNav() {
+    document.getElementById("sidebar").style.width = "180px";
+    document.getElementById("openbtn").style.display = "none";
+}
+
+function closeNav() {
+    document.getElementById("sidebar").style.width = "0";
+    document.getElementById("openbtn").style.display = "";
 }
