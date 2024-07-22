@@ -5,33 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     
-    <!-- Scripts -->
+    <!-- Inclusão de Scripts -->
+    <!-- Biblioteca para animações de rolagem -->
     <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Script personalizado para funcionalidades da página -->
     <script src="js/script.js" defer></script>
     
-    <!-- Estilos -->
+    <!-- Inclusão de Estilos -->
+    <!-- Folha de estilos CSS para a página -->
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
-    <!-- Cabeçalho -->
+
+    <!-- Cabeçalho da Página -->
     <header class="section-header">
         <div class="header-container">
             <!-- Logo -->
             <div class="header-container-logo">
-                <img src="assets/logo/logo-desktop.png" alt="Logo">
+                <a href="" class="header-container-logo">
+                    <img src="assets/logo/logo-desktop.png" alt="Logo">
+                </a>
             </div>
 
             <!-- Navegação do Cabeçalho -->
             <div class="header-container-services">
-                <a href="">Sobre nós</a>
-                <a href="">Galeria</a>
-                <a href="">Contato</a>
+                <a href="#">Sobre nós</a>
+                <a href="#">Galeria</a>
+                <a href="#">Contato</a>
             </div>
         </div>
 
         <!-- Menu Lateral -->
         <div id="sidebar" class="sidebar">
+            <!-- Botão para fechar o menu lateral -->
             <button class="closebtn" onclick="closeNav()">×</button>
+            <!-- Links de navegação no menu lateral -->
             <a href="#">Sobre nós</a>
             <a href="#">Galeria</a>
             <a href="#">Contato</a>
@@ -44,6 +52,7 @@
     <!-- Seção Slide -->
     <section class="section-slide">
         <div class="section-slide-container">
+            <!-- Imagem principal do slide -->
             <img src="assets/images/slide.png" alt="Slide">
         </div>
     </section>
@@ -59,74 +68,298 @@
             <!-- Texto Descrição -->
             <div class="brief-description-container-txtarea">
                 <div class="brief-description-container-txt">
+                    <!-- Título e texto da descrição -->
                     <h1>D'Ellas - O Sabor que Encanta</h1>
-                    <p>Transformamos momentos doces em memórias inesquecíveis.<br>
-                    Especializados em bolos e doces artesanais, nossos produtos são feitos com os melhores ingredientes e um toque de carinho que só uma confeitaria familiar pode oferecer.<br>
-                    Cada pedaço é uma celebração do sabor e da dedicação, garantindo que você sempre tenha uma experiência deliciosa e única.<br>
-                    Venha se deliciar com a gente e descubra o sabor que encanta!</p>
+                    <p>
+                        Transformamos momentos doces em memórias inesquecíveis.<br>
+                        Especializados em bolos, doces e cookies artesanais, nossos produtos são feitos com os melhores ingredientes e um toque de carinho que só uma confeitaria familiar pode oferecer.<br>
+                        Cada pedaço é uma celebração do sabor e da dedicação, garantindo que você sempre tenha uma experiência deliciosa e única.<br>
+                        Venha se deliciar com a gente e descubra o sabor que encanta!
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Seção Produtos -->
+<!-- Seção Produtos -->
     <section class="section-products">
         <div class="section-products-container">
+            <!-- Título da Seção -->
             <div class="section-products-container-title">Nosso Cardápio</div>
+            
+            <!-- Grid de Produtos -->
             <div class="section-products-container-grid">
-                <!-- Itens de Produtos -->
+                <!-- Item de Produto 1 -->
                 <div class="grid-item item1">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Cento para <br/> Festa</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/cento-donuts.jfif" alt="Cento para Festa">
+                    </div>
+                    <div class="grid-item-p">
+                        <p style="font-size: 13px;">
+                            Mini Cake Donuts personalizado para festa. 
+                            Massa base + cobertura de chocolate personalizado 
+                            com cores e confeitos relacionados ao tema da festa
+                        </p>
+                    </div>
+                    <h2>R$ 180,00</h2>
                 </div>
+
+                <!-- Item de Produto 2 -->
                 <div class="grid-item item2">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Bolo <br/> Decorado</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-festa.jfif" alt="Bolo Decorado">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Topos de Bolo por conta do cliente.</p>
+                    </div>
+                    <h2>R$ 70,00 und</h2>
                 </div>
+
+                <!-- Item de Produto 3 -->
                 <div class="grid-item item3">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Bolo <br/>Gourmet</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-gourmet.jfif" alt="Bolo Gourmet">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Bolo caseiro com cobertura cremosa de brigadeiro, decorado com morangos e brigadeiros de festa.</p>
+                    </div>
+                    <h2>R$ 38,00 und</h2>
                 </div>
+
+                <!-- Item de Produto 4 -->
                 <div class="grid-item item4">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Mini Donuts -<br/> Bandeja 12 und</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/12minicake-donuts.PNG" alt="Bandeja 12 und Mini Donuts">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Bandeja mista com 12 unidades. Para personalizados 2,00 a unidade.</p>
+                    </div>
+                    <h2>R$ 20,00</h2>
                 </div>
+
+                <!-- Item de Produto 5 -->
                 <div class="grid-item item5">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Mini Donuts -<br/> Bandeja 24 und</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/24minicake-donuts.PNG" alt="Mini Donuts - Bandeja 24 und">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Bandeja com 24 und. <br/> Pode ser personalizada ou sortida.</p>
+                    </div>
+                    <h2>R$ 40,00</h2>
                 </div>
+
+                <!-- Item de Produto 6 -->
                 <div class="grid-item item6">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Caixa de Donuts - 36 und</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/caixa-36donuts.PNG" alt="Caixa de Donuts 36 und">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Caixa com 36 und.</p>
+                    </div>
+                    <h2>R$ 65,00</h2>
                 </div>
+
+                <!-- Item de Produto 7 -->
                 <div class="grid-item item7">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Pudim <br/>de Leite</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/pudim-deleite.PNG" alt="Pudim de Leite">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Pudim de Leite com calda de caramelo.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
                 </div>
+
+                <!-- Item de Produto 8 -->
                 <div class="grid-item item8">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Bolo <br/>de limão</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-limao.jfif" alt="Bolo de limão">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de limão, cobertura de mousse de limão, com suco da própria fruta.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
                 </div>
+
+                <!-- Item de Produto 9 -->
                 <div class="grid-item item9">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Lembrancinhas <br/>Mini Donuts</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/lembrancinha-donuts.PNG" alt="Lembrancinhas Mini Donuts">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Pedido mínimo 25 unidades.</p>
+                    </div>
+                    <h2>R$ 2,00 und</h2>
                 </div>
+
+                <!-- Item de Produto 10 -->
                 <div class="grid-item item10">
-                    <h1>Bolo Decorado</h1>
-                    <img src="assets/images/donuts-img.png" alt="Bolo Decorado">
-                    <p>R$ 150,00 und</p>
+                    <h1>Bolo <br/>Formigueiro</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-formigueiro.PNG" alt="Bolo Formigueiro">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Bolo de massa de baunilha com granulado, cobertura de brigadeiro.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
                 </div>
-                <!-- Replicar a estrutura acima para outros itens (item2, item3, ..., item20) -->
-                <!-- ... -->
+
+                <!-- Item de Produto 11 -->
+                <div class="grid-item item11">
+                    <h1>Bolo <br/>de Cenoura</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-cenoura.PNG" alt="Bolo de Cenoura">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de cenoura com cobertura de brigadeiro de chocolate 50% cacau.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 12 -->
+                <div class="grid-item item12">
+                    <h1>Torta <br/>de Bolacha</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/torta-bolacha.PNG" alt="Torta de Bolacha">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Creme de nata, bolacha Maria de chocolate, ganache de chocolate.</p>
+                    </div>
+                    <h2>R$ 90,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 13 -->
+                <div class="grid-item item13">
+                    <h1>Pavê <br/>de Limão</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/pave-limao.PNG" alt="Pavê de Limão">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Pavê de Mousse de Limão com biscoito champanhe.</p>
+                    </div>
+                    <h2>R$ 90,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 14 -->
+                <div class="grid-item item14">
+                    <h1>Mousse trufado <br/>de Maracujá</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/mousse-maracuja.PNG" alt="Mousse trufado de maracujá">
+                    </div>
+                    <div class="grid-item-p">
+                        <p style="font-size: 15px;">
+                            Mousse de maracujá com ganache de chocolate ao leite.<br/>
+                            Opcional - redução da polpa de maracujá como cobertura.
+                        </p>
+                    </div>
+                    <h2>R$ 90,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 15 -->
+                <div class="grid-item item15">
+                    <h1>Bombom de Uva <br/>na travessa</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bombom-uva.PNG" alt="Bombom de Uva na travessa">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Brigadeiro branco, uvas e ganache de chocolate.</p>
+                    </div>
+                    <h2>R$ 100,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 16 -->
+                <div class="grid-item item16">
+                    <h1>Torta de abacaxi<br/> com coco</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/torta-abacaxi.PNG" alt="Torta de abacaxi com coco">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Creme belga com pedaços de abacaxi, biscoito champanhe, chantilly, coberto com coco ralado.</p>
+                    </div>
+                    <h2>R$ 100,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 17 -->
+                <div class="grid-item item17">
+                    <h1>Bombom de Morango<br/>na travessa</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bombom-morango.jpg" alt="Bombom de Morango na travessa">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Brigadeiro branco, morangos, ganache de chocolate.</p>
+                    </div>
+                    <h2>R$ 100,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 18 -->
+                <div class="grid-item item18">
+                    <h1>Bolo <br/>dois amores</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-doisamores.jfif" alt="Bolo dois amores">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de chocolate com cobertura meio brigadeiro e meio branquinho.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 19 -->
+                <div class="grid-item item19">
+                    <h1>Bolo <br/>de Chocolate</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-chocolate.jfif" alt="Bolo de chocolate">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de chocolate com cobertura de brigadeiro.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 20 -->
+                <div class="grid-item item20">
+                    <h1>Bolo <br/>de Côco</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-coco.PNG" alt="Bolo de coco">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de coco com cobertura de beijinho.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 21 -->
+                <div class="grid-item item21">
+                    <h1>Bolo de Côco <br/>com Doce de Leite</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-docedeleite.jfif" alt="Bolo de coco com Doce de Leite">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de coco com cobertura de doce de leite.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
+                </div>
+
+                <!-- Item de Produto 22 -->
+                <div class="grid-item item22">
+                    <h1>Bolo <br/>de Leite Ninho</h1>
+                    <div class="grid-item-img">
+                        <img src="assets/products/bolo-leiteninho.jfif" alt="Bolo de Leite Ninho">
+                    </div>
+                    <div class="grid-item-p">
+                        <p>Massa de chocolate com cobertura de brigadeiro de leite ninho.</p>
+                    </div>
+                    <h2>R$ 25,00 und</h2>
+                </div>
+                
             </div>
             
             <!-- Botão WhatsApp -->
@@ -142,6 +375,7 @@
             </div>
         </div>
     </section>
+    <div id="overlay"></div>
 
     <!-- Rodapé -->
     <footer>
@@ -164,5 +398,6 @@
             </div>
         </div>
     </footer>
+
 </body>
 </html>
