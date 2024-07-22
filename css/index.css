@@ -336,7 +336,7 @@ body {
 
 /* CLASSE PARA AUMENTAR A IMAGEM */
 .grid-item img.enlarged {
-    transform: scale(1.4); /* Ajuste o fator de escala conforme necessário */
+    transform: scale(1.7); /* Ajuste o fator de escala conforme necessário */
     transition: transform 0.3s ease, border 0.3s ease; /* Transição suave para a borda */
     z-index: 10; /* Garante que a imagem fique sobre o overlay */
     position: relative; /* Garante que a imagem ampliada fique acima do overlay */
@@ -506,5 +506,9 @@ body {
 
     .footer-container-logo-txt {
         font-size: 3vw;
+    }
+    .grid-item img.enlarged {
+        transform: scale(1.3);
+        border: none;
     }
 }
