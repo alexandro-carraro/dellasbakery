@@ -23,6 +23,13 @@ revelar.reveal('.brief-description-container-txt', {
     duration: 5000 // Duração da animação em milissegundos
 });
 
+// Revela o texto da descrição com animação da direita
+revelar.reveal('.brief-description-container-txt-2', {
+    ...revealOptions,
+    origin: 'left', // Origem do efeito de revelação
+    duration: 5000 // Duração da animação em milissegundos
+});
+
 // Revela o título da seção de produtos com animação da esquerda
 revelar.reveal('.section-products-container-title', {
     origin: 'left', // Origem do efeito de revelação
