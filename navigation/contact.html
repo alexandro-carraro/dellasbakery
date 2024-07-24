@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <!-- Inclusão de Scripts -->
+    <!-- Biblioteca para animações de rolagem -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Script personalizado para funcionalidades da página -->
+    <script src="../js/script.js" defer></script>
+    
+    <!-- Inclusão de Estilos -->
+    <!-- Folha de estilos CSS para a página -->
+    <link rel="stylesheet" type="text/css" href="../css/gallery.css">
+</head>
+<body>
+
+    <!-- Cabeçalho da Página -->
+    <header class="section-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-container-logo">
+                <a href="../index.html" class="header-container-logo">
+                    <img src="../assets/logo/logo-desktop.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Navegação do Cabeçalho -->
+            <div class="header-container-services">
+                <a href="about.html">Sobre nós</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="contact.html">Contato</a>
+            </div>
+        </div>
+
+        <!-- Menu Lateral -->
+        <div id="sidebar" class="sidebar">
+            <!-- Botão para fechar o menu lateral -->
+            <button class="closebtn" onclick="closeNav()">×</button>
+            <!-- Links de navegação no menu lateral -->
+            <a href="about.html">Sobre nós</a>
+            <a href="gallery.html">Galeria</a>
+            <a href="contact.html">Contato</a>
+        </div>
+
+        <div class="header-container-section">
+            <div class="header-container-section-txt">
+                <a href="../index.html">Home</a>
+                <P>- Contato</P>
+            </div>
+        </div>
+
+        <!-- Botão para abrir o menu lateral -->
+        <span id="openbtn" class="openbtn" onclick="openNav()">☰</span>
+    </header>
+
+    <section class="section-contact">
+        <div class="section-contact-tittle">
+            <h1>Endereço e contatos</h1>
+        </div>
+        <div class="section-contact-container">
+            <div class="section-contact-container-map"></div>
+            <div class="section-contact-container-contacts"></div>
+        </div>
+    </section>
+    
+
+    <!-- Rodapé -->
+    <footer class="section-footer">
+        <div class="footer-container">
+            <div class="footer-container-logo">
+                <div class="footer-container-logo-img">
+                    <img src="../assets/logo/logo-desktop.png" alt="Logo">
+                </div>
+                <div class="footer-container-logo-txt">
+                    <div class="footer-container-logo-txt-copy">
+                        <p>Copyright © 2024. Made by</p>
+                    </div>
+                    <div class="footer-container-logo-txt-assign">
+                        <a href="https://www.linkedin.com/in/alexandro-carraro" target="_blank">Alexandro Carraro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container-social">
+                <div class="footer-container-social-instagram"></div>                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

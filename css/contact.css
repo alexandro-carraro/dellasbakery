@@ -1,0 +1,265 @@
+/* IMPORTAÇÃO DE FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ESTILO GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* HEADER AREA */
+.section-header {
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 1000;
+}
+
+.header-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    padding: 15px 25px;
+}
+
+.header-container-logo {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-container-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.header-container-services {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.header-container-services a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: #333739;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+}
+
+.header-container-services a:hover {
+    color: #FA6289;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+.header-container-section{
+    background-image: url(../assets/images/background-section.png);
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    font-family: "Lora", sans-serif;
+    
+    font-style: italic;
+    line-height: 2.25em;
+}
+
+.header-container-section-txt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+.header-container-section-txt a{
+    text-decoration: none;
+    margin-right: 5px;
+    color: #FA6289;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+
+/* MENU LATERAL */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ec829cc0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1001;
+}
+
+.sidebar a {
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: "Lora", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .25px;
+    margin-top: 20px;
+}
+
+.sidebar a:hover {
+    color: #FA6289;
+}
+
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 45px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+}
+
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333739;
+    padding: 10px;
+    border: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MAIORES */
+@media (min-width: 701px) {
+    .sidebar {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+}
+
+
+/* SECTION CONTACT */
+
+
+
+
+/* SECTION FOOTER */
+.section-footer{
+    justify-content: end;
+}
+.footer-container {
+    max-width: 100vw;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+.footer-container-logo {
+    width: auto;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-container-logo-img {
+    width: auto;
+    height: 90%;
+}
+
+.footer-container-logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 5px;
+}
+
+.footer-container-logo-txt {
+    display: flex;
+    color: #3b3d42;
+    font-family: "Lora", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.footer-container-logo-txt-assign a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: royalblue;
+    font-weight: bolder;
+}
+
+.footer-container-logo-txt-assign a:hover {
+    color: rgb(26, 71, 206);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* RESPONSIVIDADE PARA TABLETS (700px - 900px) */
+@media (min-width: 701px) and (max-width: 900px) {
+
+    
+}
+
+/* RESPONSIVIDADE PARA MÓVEIS (320px - 700px) */
+@media (min-width: 320px) and (max-width: 700px) {
+    .header-container-services {
+        display: none;
+    }
+
+    .footer-container {
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .footer-container-logo {
+        flex-direction: column;
+    }
+
+    .footer-container-logo-txt {
+        font-size: 3vw;
+    }
+}
