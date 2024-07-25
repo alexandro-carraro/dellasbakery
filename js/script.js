@@ -1,4 +1,4 @@
-/////////////////////////////// FUNÇÕES GLOBAIS ///////////////////////////////
+///////////////////////////// FUNÇÕES GLOBAIS ///////////////////////////////
 
 // Inicializa o ScrollReveal para animações de rolagem
 window.revelar = ScrollReveal({ reset: true });
@@ -27,7 +27,7 @@ function closeNav() {
     document.getElementById("openbtn").style.display = "";    // Exibe o botão de abrir
 }
 
-/////////////////////////////// FUNÇÕES INDEX ///////////////////////////////
+///////////////////////////// FUNÇÕES INDEX ///////////////////////////////
 
 // Revela a seção do slide com animação da direita
 revelar.reveal('.section-slide-container', {
@@ -96,7 +96,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-/////////////////////////////// FUNÇÕES ABOUT ///////////////////////////////
+///////////////////////////// FUNÇÕES ABOUT ///////////////////////////////
 
 // Revela o texto da descrição com animação da esquerda
 revelar.reveal('.brief-description-container-txt-2', {
@@ -106,14 +106,12 @@ revelar.reveal('.brief-description-container-txt-2', {
     duration: 5000    // Duração da animação em milissegundos
 });
 
-
-
-/////////////////////////////// FUNÇÕES GALLERY ///////////////////////////////
+///////////////////////////// FUNÇÕES GALLERY ///////////////////////////////
 
 // Função para abrir a galeria
 function openGallery(category) {
-    const galleryModal = document.getElementById('galleryModal');
-    const galleryContent = document.getElementById('galleryContent');
+    const galleryModal = document.getElementById('galleryModal'); // Seleciona o modal da galeria
+    const galleryContent = document.getElementById('galleryContent'); // Seleciona o conteúdo da galeria
 
     // Limpa o conteúdo anterior
     galleryContent.innerHTML = '';
@@ -131,26 +129,27 @@ function openGallery(category) {
         'boloGourmet': ['bolo-gourmet.png', 'bolo-gourmet1.png', 'bolo-gourmet2.png', 'bolo-gourmet3.png', 'bolo-gourmet4.png', 'bolo-gourmet5.png']
     };
 
+    // Adiciona imagens da categoria selecionada ao conteúdo da galeria
     images[category].forEach(src => {
         const img = document.createElement('img');
         img.src = `../assets/products/${src}`;
         galleryContent.appendChild(img);
     });
 
-    galleryModal.style.display = 'flex';
+    galleryModal.style.display = 'flex'; // Exibe o modal da galeria
 }
 
 // Função para fechar a galeria
 function closeGallery() {
-    const galleryModal = document.getElementById('galleryModal');
-    galleryModal.style.display = 'none';
+    const galleryModal = document.getElementById('galleryModal'); // Seleciona o modal da galeria
+    galleryModal.style.display = 'none'; // Oculta o modal da galeria
 }
 
-// Revela o texto da descrição com animação da esquerda
+// Revela o texto da descrição na galeria com animação da esquerda
 revelar.reveal('.gallery-column', {
     ...revealOptions,
     origin: 'top',  // Origem do efeito de revelação
     distance: '0%', // Distância de deslocamento
-    duration: 2000,    // Duração da animação em milissegundos
+    duration: 2000, // Duração da animação em milissegundos
     opacity: 0
 });
