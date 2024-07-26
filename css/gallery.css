@@ -190,7 +190,10 @@ body {
 /* SECTION GALLERY */
 /* Estilo para a seção de galeria, com margem superior e padding definidos */
 .section-gallery {
-    margin-top: 110px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
     padding: 60px 20px;
     background-color: #f9f9f9;
 }
@@ -210,6 +213,7 @@ body {
 
 /* Estilo para o container da galeria, com itens espaçados e embrulhados */
 .section-gallery-container {
+    max-width: 1020px;
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
@@ -318,13 +322,16 @@ body {
 
 /* Estilo para imagens dentro do conteúdo do modal, ajustando tamanho e espaçamento */
 .gallery-content img {
-    margin-right: 20px;
-    width: 100%;
-    max-width: 400px;
-    height: 100%;
-    max-height: 500px;
+    margin-bottom: 20px; /* Espaçamento entre imagens na vertical */
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%; /* Largura máxima da imagem */
+    max-width: 400px; /* Largura máxima para garantir a proporção */
+    height: auto; /* Ajusta a altura para manter a proporção */
+    max-height: 500px; /* Altura máxima para garantir que as imagens não sejam muito grandes */
     object-fit: cover;
 }
+
 
 /* SECTION FOOTER */
 /* Estilo para a seção do rodapé, ajustando o alinhamento dos itens */
@@ -406,6 +413,32 @@ body {
 /* Ajusta estilos para dispositivos móveis, incluindo a ocultação de serviços do cabeçalho e ajustes no rodapé */
 @media (min-width: 320px) and (max-width: 700px) {
     /* Oculta a área de serviços no cabeçalho para dispositivos móveis */
+    .gallery-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        height: 80vh;
+    }
+
+    .gallery-content img {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        max-height: 500px;
+    }
+
+    .gallery-modal .close {
+        position: absolute;
+        top: 500px;
+        left: 30px;
+        color: white;
+        font-size: 60px;
+        cursor: pointer;
+    }
+
     .header-container-services {
         display: none;
     }
