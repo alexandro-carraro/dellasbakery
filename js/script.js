@@ -27,14 +27,6 @@ function closeNav() {
     document.getElementById("openbtn").style.display = "";    // Exibe o botão de abrir
 }
 
-// Função para abrir o WhatsApp com uma mensagem predefinida
-function openWhatsApp() {
-    const telefone = '5547996144717'; // Número de telefone
-    const mensagem = 'Ol%C3%A1!%20Cheguei%20at%C3%A9%20aqui%20por%20meio%20do%20site,%20e%20gostaria%20de%20falar%20sobre%20os%20produtos!'; // Mensagem codificada
-    const url = `https://wa.me/${telefone}?text=${mensagem}`; // URL para abrir o WhatsApp
-    window.open(url, '_blank'); // Abre a URL em uma nova aba
-}
-
 ///////////////////////////// FUNÇÕES INDEX ///////////////////////////////
 
 // Revela a seção do slide com animação da direita
@@ -65,6 +57,14 @@ revelar.reveal('.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, 
     opacity: 0      // Opacidade inicial
 });
 
+// Função para abrir o WhatsApp com uma mensagem predefinida
+function openWhatsApp() {
+    const telefone = '5547996144717'; // Número de telefone
+    const mensagem = 'Ol%C3%A1!%20Cheguei%20at%C3%A9%20aqui%20por%20meio%20do%20site,%20e%20gostaria%20de%20falar%20sobre%20os%20produtos!'; // Mensagem codificada
+    const url = `https://wa.me/${telefone}?text=${mensagem}`; // URL para abrir o WhatsApp
+    window.open(url, '_blank'); // Abre a URL em uma nova aba
+}
+
 // Adiciona eventos de clique para as imagens da grade e o overlay
 document.addEventListener('DOMContentLoaded', () => {
     const gridItems = document.querySelectorAll('.grid-item img'); // Seleciona todas as imagens na grade
@@ -81,6 +81,13 @@ document.addEventListener('DOMContentLoaded', () => {
             // Exibe ou oculta o overlay com base na classe da imagem
             if (img.classList.contains('enlarged')) {
                 overlay.style.display = 'block'; // Exibe o overlay
+
+                // Centraliza a imagem ampliada na tela
+                const rect = img.getBoundingClientRect();
+                window.scrollTo({
+                    top: rect.top + window.pageYOffset - (window.innerHeight / 2) + (rect.height / 2),
+                    behavior: 'smooth'
+                });
             } else {
                 overlay.style.display = 'none'; // Oculta o overlay
             }
@@ -95,6 +102,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.display = 'none'; // Oculta o overlay
     });
 });
+
 
 ///////////////////////////// FUNÇÕES ABOUT ///////////////////////////////
 
@@ -156,7 +164,9 @@ revelar.reveal('.gallery-column', {
     opacity: 0
 });
 
-// Adiciona eventos de clique para as imagens da galeria e o overlay
+// Verifica se o dispositivo é móvel
+const isMobile = () => window.innerWidth <= 700;
+
 document.addEventListener('DOMContentLoaded', () => {
     const gridItems = document.querySelectorAll('.gallery-item img'); // Seleciona todas as imagens na galeria
     const overlays = document.querySelectorAll('.gallery-item .overlay'); // Seleciona todos os overlays
@@ -173,13 +183,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Configura o Intersection Observer
-    const observer = new IntersectionObserver(handleOverlay, {
-        threshold: 1.0 // A imagem deve estar 100% visível
-    });
+    if (isMobile()) {
+        // Configura o Intersection Observer somente em dispositivos móveis
+        const observer = new IntersectionObserver(handleOverlay, {
+            threshold: 1.0 // A imagem deve estar 100% visível
+        });
 
-    // Observa cada item da galeria
-    gridItems.forEach(item => {
-        observer.observe(item);
-    });
+        // Observa cada item da galeria
+        gridItems.forEach(item => {
+            observer.observe(item);
+        });
+    } else {
+        // Adiciona eventos de mouse para dispositivos desktop
+        gridItems.forEach((item, index) => {
+            const overlay = overlays[index];
+
+            item.addEventListener('mouseenter', () => {
+                overlay.style.opacity = '1'; // Ativa o overlay
+            });
+
+            item.addEventListener('mouseleave', () => {
+                overlay.style.opacity = '0'; // Desativa o overlay
+            });
+        });
+    }
 });
+
+
