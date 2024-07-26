@@ -40,7 +40,7 @@ revelar.reveal('.section-slide-container', {
 revelar.reveal('.brief-description-container-txt', {
     ...revealOptions,
     origin: 'right',  // Origem do efeito de revelação
-    duration: 5000    // Duração da animação em milissegundos
+    duration: 4000    // Duração da animação em milissegundos
 });
 
 // Revela o título da seção de produtos com animação da esquerda
@@ -147,7 +147,6 @@ document.addEventListener('DOMContentLoaded', function() {
     handleVisibilityForMobile();
     window.addEventListener('resize', handleVisibilityForMobile);
 });
-
 
 
 ///////////////////////////// FUNÇÕES ABOUT ///////////////////////////////
