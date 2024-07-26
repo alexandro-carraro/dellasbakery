@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var targetItems = [];
     
     // Adiciona todos os itens de item1 a item21 ao array targetItems
-    for (let i = 1; i <= 21; i++) {
+    for (let i = 1; i <= 20; i++) {
         targetItems.push(document.querySelector('.grid-item.item' + i));
     }
 
