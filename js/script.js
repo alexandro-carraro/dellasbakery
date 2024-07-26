@@ -103,6 +103,52 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    var whatsappButton = document.querySelector('.section-products-container-whathsapp');
+    var targetItems = [];
+    
+    // Adiciona todos os itens de item1 a item21 ao array targetItems
+    for (let i = 1; i <= 21; i++) {
+        targetItems.push(document.querySelector('.grid-item.item' + i));
+    }
+
+    function checkItemVisibility() {
+        var windowHeight = window.innerHeight;
+        var isVisible = false;
+
+        // Verifica se qualquer item do intervalo está visível
+        targetItems.forEach(function(item) {
+            if (item) {
+                var itemRect = item.getBoundingClientRect();
+                if (itemRect.top <= windowHeight && itemRect.bottom >= 0) {
+                    isVisible = true;
+                }
+            }
+        });
+
+        // Ajusta a posição do botão com base na visibilidade dos itens
+        whatsappButton.style.position = isVisible ? 'fixed' : 'static';
+    }
+
+    // Verifica se a tela é menor que 768px (considerado mobile)
+    function handleVisibilityForMobile() {
+        if (window.matchMedia("(max-width: 768px)").matches) {
+            // Verifica a visibilidade dos itens ao rolar e ao carregar a página
+            window.addEventListener('scroll', checkItemVisibility);
+            window.addEventListener('resize', checkItemVisibility);
+            checkItemVisibility(); // Verifica a visibilidade inicial
+        } else {
+            // Garante que a posição do botão seja fixa em telas maiores que 768px
+            whatsappButton.style.position = 'fixed';
+        }
+    }
+
+    // Inicializa a verificação e ajusta conforme necessário
+    handleVisibilityForMobile();
+    window.addEventListener('resize', handleVisibilityForMobile);
+});
+
+
 
 ///////////////////////////// FUNÇÕES ABOUT ///////////////////////////////
 
