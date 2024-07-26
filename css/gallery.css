@@ -330,6 +330,8 @@ body {
     height: auto; /* Ajusta a altura para manter a proporção */
     max-height: 500px; /* Altura máxima para garantir que as imagens não sejam muito grandes */
     object-fit: cover;
+    /* Adiciona uma borda mais transparente */
+    border: 5px solid rgba(0, 0, 0, 0.3); /* Borda preta com 30% de opacidade */
 }
 
 
@@ -431,7 +433,7 @@ body {
     }
 
     .gallery-modal .close {
-        position: absolute;
+        position: fixed;
         top: 630px;
         left: 30px;
         color: white;

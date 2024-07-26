@@ -137,13 +137,16 @@ function openGallery(category) {
     });
 
     galleryModal.style.display = 'flex'; // Exibe o modal da galeria
+    document.body.style.overflow = 'hidden'; // Desabilita o scroll da página
 }
 
 // Função para fechar a galeria
 function closeGallery() {
     const galleryModal = document.getElementById('galleryModal'); // Seleciona o modal da galeria
     galleryModal.style.display = 'none'; // Oculta o modal da galeria
+    document.body.style.overflow = ''; // Reativa o scroll da página
 }
+
 
 // Revela o texto da descrição na galeria com animação da esquerda
 revelar.reveal('.gallery-column', {
