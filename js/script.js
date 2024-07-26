@@ -210,3 +210,32 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 
+
+///////////////////////////// FUNÇÕES CONTACT ///////////////////////////////
+
+document.addEventListener("DOMContentLoaded", function() {
+    function checkOverlay() {
+        const overlay = document.querySelector('.section-contact-container-map .overlay');
+        const mapImage = document.querySelector('.section-contact-container-map .map-image');
+        
+        if (window.innerWidth <= 700) { // Verifica se é um dispositivo móvel
+            const rect = mapImage.getBoundingClientRect();
+            const windowHeight = window.innerHeight;
+            const imageMiddle = rect.top + rect.height / 2;
+            
+            if (imageMiddle >= windowHeight / 2 - 50 && imageMiddle <= windowHeight / 2 + 50) {
+                overlay.classList.add('active');
+            } else {
+                overlay.classList.remove('active');
+            }
+        } else {
+            overlay.classList.remove('active'); // Remove o overlay em telas maiores
+        }
+    }
+
+    window.addEventListener('scroll', checkOverlay);
+    window.addEventListener('resize', checkOverlay);
+    checkOverlay(); // Verifica a posição ao carregar a página
+});
+
+

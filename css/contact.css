@@ -14,7 +14,6 @@ body {
     margin: 0;
 }
 
-
 /* SECTION HEADER*/
 /* Estilo para o cabeçalho fixo que ocupa a largura total da tela */
 .section-header {
@@ -251,6 +250,38 @@ body {
     transform: scale(1.05);
 }
 
+/* Estilo para o overlay sobre os itens da galeria, incluindo cor e transição de opacidade */
+.overlay {
+    color: white;
+    font-family: "Lora", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 105, 180, 0.5); /* Cor rosa com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Evita que o overlay interfira com cliques */
+}
+
+/* Classe ativa para mostrar o overlay */
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto; /* Permite interação com o overlay */
+}
+
+.section-contact-container-map:hover .overlay {
+    opacity: 1;
+}
+
 /* Estilo para a área de contatos */
 .section-contact-container-contacts {
     padding: 20px;
@@ -300,7 +331,6 @@ body {
     background-color: #FA6289;
     color: white;
 }
-
 
 /* SECTION FOOTER*/
 /* Estilo para o rodapé */
