@@ -27,6 +27,14 @@ function closeNav() {
     document.getElementById("openbtn").style.display = "";    // Exibe o botão de abrir
 }
 
+// Função para abrir o WhatsApp com uma mensagem predefinida
+function openWhatsApp() {
+    const telefone = '5547996144717'; // Número de telefone
+    const mensagem = 'Ol%C3%A1!%20Cheguei%20at%C3%A9%20aqui%20por%20meio%20do%20site,%20e%20gostaria%20de%20falar%20sobre%20os%20produtos!'; // Mensagem codificada
+    const url = `https://wa.me/${telefone}?text=${mensagem}`; // URL para abrir o WhatsApp
+    window.open(url, '_blank'); // Abre a URL em uma nova aba
+}
+
 ///////////////////////////// FUNÇÕES INDEX ///////////////////////////////
 
 // Revela a seção do slide com animação da direita
@@ -56,14 +64,6 @@ revelar.reveal('.item1, .item2, .item3, .item4, .item5, .item6, .item7, .item8, 
     duration: 1000, // Duração da animação em milissegundos
     opacity: 0      // Opacidade inicial
 });
-
-// Função para abrir o WhatsApp com uma mensagem predefinida
-function openWhatsApp() {
-    const telefone = '5547996144717'; // Número de telefone
-    const mensagem = 'Ol%C3%A1!%20Cheguei%20at%C3%A9%20aqui%20por%20meio%20do%20site,%20e%20gostaria%20de%20falar%20sobre%20os%20produtos!'; // Mensagem codificada
-    const url = `https://wa.me/${telefone}?text=${mensagem}`; // URL para abrir o WhatsApp
-    window.open(url, '_blank'); // Abre a URL em uma nova aba
-}
 
 // Adiciona eventos de clique para as imagens da grade e o overlay
 document.addEventListener('DOMContentLoaded', () => {
@@ -147,7 +147,6 @@ function closeGallery() {
     document.body.style.overflow = ''; // Reativa o scroll da página
 }
 
-
 // Revela o texto da descrição na galeria com animação da esquerda
 revelar.reveal('.gallery-column', {
     ...revealOptions,
@@ -155,4 +154,32 @@ revelar.reveal('.gallery-column', {
     distance: '0%', // Distância de deslocamento
     duration: 2000, // Duração da animação em milissegundos
     opacity: 0
+});
+
+// Adiciona eventos de clique para as imagens da galeria e o overlay
+document.addEventListener('DOMContentLoaded', () => {
+    const gridItems = document.querySelectorAll('.gallery-item img'); // Seleciona todas as imagens na galeria
+    const overlays = document.querySelectorAll('.gallery-item .overlay'); // Seleciona todos os overlays
+
+    // Função para ativar o overlay
+    const handleOverlay = (entries, observer) => {
+        entries.forEach(entry => {
+            const overlay = entry.target.nextElementSibling; // O overlay associado à imagem
+            if (entry.isIntersecting) {
+                overlay.style.opacity = '1'; // Ativa o overlay
+            } else {
+                overlay.style.opacity = '0'; // Desativa o overlay
+            }
+        });
+    };
+
+    // Configura o Intersection Observer
+    const observer = new IntersectionObserver(handleOverlay, {
+        threshold: 1.0 // A imagem deve estar 100% visível
+    });
+
+    // Observa cada item da galeria
+    gridItems.forEach(item => {
+        observer.observe(item);
+    });
 });

@@ -445,6 +445,23 @@ body {
         display: none;
     }
 
+     /* Estilo para o overlay ativado */
+     .gallery-item .overlay {
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item img {
+        transition: opacity 0.3s ease; /* Transição para a opacidade da imagem */
+    }
+
+    .gallery-item img.active {
+        opacity: 0.5; /* Ajuste a opacidade da imagem quando o overlay estiver ativo */
+    }
+
+    .gallery-item img.active + .overlay {
+        opacity: 1; /* Torna o overlay visível quando a imagem está ativa */
+    }
+
     /* Ajusta o rodapé para centralizar os itens e adicionar padding */
     .footer-container {
         justify-content: center;
@@ -461,3 +478,4 @@ body {
         font-size: 3vw;
     }
 }
+
