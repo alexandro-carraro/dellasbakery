@@ -1,0 +1,438 @@
+/* Importa as fontes do Google Fonts para uso no site */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* Reseta as margens e o preenchimento para todos os elementos e define o box-sizing como border-box */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte padrão e remove a margem do corpo do documento */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* SECTION HEADER*/
+/* Estilo para o cabeçalho fixo que ocupa a largura total da tela */
+.section-header {
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 1000;
+}
+
+/* Estiliza o contêiner do cabeçalho para exibir elementos em linha e centralizados */
+.header-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    padding: 15px 25px;
+}
+
+/* Estilo para o logotipo no cabeçalho */
+.header-container-logo {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.header-container-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilo para os links de serviços no cabeçalho */
+.header-container-services {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+.header-container-services a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: #333739;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+}
+
+/* Efeito hover para links de serviços no cabeçalho */
+.header-container-services a:hover {
+    color: #FA6289;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Estilo para a seção com o fundo e a linha de altura */
+.header-container-section {
+    background-image: url(../assets/images/background-section.png);
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    font-family: "Lora", sans-serif;
+    font-style: italic;
+    line-height: 2.25em;
+}
+
+/* Estilo para o texto dentro da seção do cabeçalho */
+.header-container-section-txt {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Estilo para os links dentro da seção do cabeçalho */
+.header-container-section-txt a {
+    text-decoration: none;
+    margin-right: 5px;
+    color: #FA6289;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* Estilo para a barra lateral fixa */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ec829cc0;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1001;
+}
+
+/* Estilo para os links na barra lateral */
+.sidebar a {
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: "Lora", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .25px;
+    margin-top: 20px;
+}
+
+/* Efeito hover para links na barra lateral */
+.sidebar a:hover {
+    color: #FA6289;
+}
+
+/* Estilo para o botão de fechar na barra lateral */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 45px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+}
+
+/* Estilo para o botão de abrir a barra lateral */
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333739;
+    padding: 10px;
+    border: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+/* Esconde a barra lateral e o botão de abrir em telas maiores */
+@media (min-width: 701px) {
+    .sidebar {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+}
+
+/* SECTION CONTACT*/
+/* Estilo para a seção de contato */
+.section-contact {
+    background-color: #f9f9f9;
+    padding: 60px 20px;
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Estilo para o título da seção de contato */
+.section-contact-title {
+    margin-bottom: 40px;
+}
+
+.section-contact-title h1 {
+    color: #333739;
+    font-family: "Lora", Sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 2px;
+}
+
+/* Estilo para o contêiner da seção de contato */
+.section-contact-container {
+    display: flex;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+/* Estilo para o mapa e os contatos dentro do contêiner da seção de contato */
+.section-contact-container-map,
+.section-contact-container-contacts {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para a área do mapa */
+.section-contact-container-map {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Estilo para o link do mapa */
+.section-contact-container-map a {
+    display: block;
+}
+
+/* Estilo para a imagem do mapa */
+.map-image {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s;
+}
+
+/* Efeito hover para a imagem do mapa */
+.section-contact-container-map:hover .map-image {
+    transform: scale(1.05);
+}
+
+/* Estilo para o overlay sobre os itens da galeria, incluindo cor e transição de opacidade */
+.overlay {
+    color: white;
+    font-family: "Lora", sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 105, 180, 0.5); /* Cor rosa com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none; /* Evita que o overlay interfira com cliques */
+}
+
+/* Classe ativa para mostrar o overlay */
+.overlay.active {
+    opacity: 1;
+    pointer-events: auto; /* Permite interação com o overlay */
+}
+
+.section-contact-container-map:hover .overlay {
+    opacity: 1;
+}
+
+/* Estilo para a área de contatos */
+.section-contact-container-contacts {
+    padding: 20px;
+    background: rgba(250, 98, 137, 0.1);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilo para os parágrafos e links na área de contatos */
+.section-contact-container-contacts p,
+.section-contact-container-contacts a {
+    margin-bottom: 15px;
+    font-family: "Lora", Sans-serif;
+    font-size: 18px;
+    line-height: 1.625em;
+}
+
+.section-contact-container-contacts p a {
+    color: #FA6289;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Efeito hover para links na área de contatos */
+.section-contact-container-contacts a:hover {
+    text-decoration: underline;
+}
+
+/* Estilo para o botão de WhatsApp */
+.whatsapp-button {
+    background-color: #ec829d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+/* Efeito hover para o botão de WhatsApp */
+.whatsapp-button:hover {
+    background-color: #FA6289;
+    color: white;
+}
+
+/* SECTION FOOTER*/
+/* Estilo para o rodapé */
+.section-footer {
+    justify-content: end;
+}
+
+/* Estilo para o contêiner do rodapé */
+.footer-container {
+    max-width: 100vw;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Estilo para o logotipo no rodapé */
+.footer-container-logo {
+    width: auto;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a imagem do logotipo no rodapé */
+.footer-container-logo-img {
+    width: auto;
+    height: 90%;
+}
+
+.footer-container-logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 5px;
+}
+
+/* Estilo para o texto do logotipo no rodapé */
+.footer-container-logo-txt {
+    display: flex;
+    color: #3b3d42;
+    font-family: "Lora", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Estilo para links de atribuição no texto do logotipo do rodapé */
+.footer-container-logo-txt-assign a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: royalblue;
+    font-weight: bolder;
+}
+
+/* Efeito hover para links de atribuição no texto do logotipo do rodapé */
+.footer-container-logo-txt-assign a:hover {
+    color: rgb(26, 71, 206);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* Estilos responsivos para tablets */
+@media (min-width: 701px) and (max-width: 900px) {
+    /* Adicione estilos responsivos específicos para tablets aqui */
+}
+
+/* Estilos responsivos para dispositivos móveis */
+@media (min-width: 320px) and (max-width: 700px) {
+    .header-container-services {
+        display: none;
+    }
+
+    .footer-container {
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .footer-container-logo {
+        flex-direction: column;
+    }
+
+    .footer-container-logo-txt {
+        font-size: 3vw;
+    }
+
+    .section-contact-container {
+        flex-direction: column;
+        width: 90%;
+    }
+
+    .whatsapp-button {
+        color: white;
+    }
+}

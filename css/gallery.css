@@ -1,0 +1,481 @@
+/* IMPORTAÇÃO DE FONTE */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ESTILO GLOBAL */
+/* Reseta margens e preenchimentos, e define box-sizing para border-box em todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo para o elemento <body>, definindo a fonte padrão e removendo a margem */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* HEADER AREA */
+/* Estilo para a seção do cabeçalho, fixada no topo da página com largura total e fundo branco */
+.section-header {
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Estilo para o container do cabeçalho, ajustando a altura, o alinhamento e o espaçamento dos itens */
+.header-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 110px;
+    padding: 15px 25px;
+}
+
+/* Estilo para o logo dentro do cabeçalho, com altura fixada e centralização dos itens */
+.header-container-logo {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilo para a imagem do logo, garantindo que ela preencha o container sem distorção */
+.header-container-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilo para a área de serviços do cabeçalho, com itens dispostos horizontalmente */
+.header-container-services {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+/* Estilo para links na área de serviços, removendo sublinhado, definindo margens e estilizando a fonte */
+.header-container-services a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: #333739;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+}
+
+/* Estilo para links na área de serviços ao passar o mouse, alterando a cor e adicionando transição */
+.header-container-services a:hover {
+    color: #FA6289;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+/* Estilo para a seção com fundo de imagem repetida horizontalmente e altura fixa */
+.header-container-section{
+    background-image: url(../assets/images/background-section.png);
+    background-repeat: repeat-x;
+    width: 100vw;
+    height: 40px;
+    display: flex;
+    font-family: "Lora", sans-serif;
+    font-style: italic;
+    line-height: 2.25em;
+}
+
+/* Estilo para o texto dentro da seção de fundo, com alinhamento e margem definida */
+.header-container-section-txt{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 25px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Estilo para links dentro da seção de fundo, removendo sublinhado e definindo cor e tamanho da fonte */
+.header-container-section-txt a{
+    text-decoration: none;
+    margin-right: 5px;
+    color: #FA6289;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+/* MENU LATERAL */
+/* Estilo para o menu lateral, inicialmente oculto com largura zero e posicionado fixamente no lado direito */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ec829cc0; /* Cor de fundo com transparência */
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    z-index: 1001; /* Garante que o menu lateral fique acima de outros elementos */
+}
+
+/* Estilo para os links dentro do menu lateral, incluindo padding, tamanho da fonte e estilo de fonte */
+.sidebar a {
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s;
+    text-decoration: none;
+    font-family: "Lora", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .25px;
+    margin-top: 20px;
+}
+
+/* Estilo para links no menu lateral ao passar o mouse, alterando a cor */
+.sidebar a:hover {
+    color: #FA6289;
+}
+
+/* Estilo para o botão de fechar do menu lateral */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 45px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+}
+
+/* Estilo para o botão que abre o menu lateral, fixado no topo direito da página */
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333739;
+    padding: 10px;
+    border: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000;
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MAIORES */
+/* Oculta o menu lateral e o botão de abrir o menu para dispositivos com largura mínima de 701px */
+@media (min-width: 701px) {
+    .sidebar {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+}
+
+/* SECTION GALLERY */
+/* Estilo para a seção de galeria, com margem superior e padding definidos */
+.section-gallery {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 120px;
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+}
+
+/* Estilo para o título da galeria, incluindo cor, fonte, tamanho e alinhamento */
+.section-gallery-tittle h1{
+    color: #333739;
+    font-family: "Lora", Sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Estilo para o container da galeria, com itens espaçados e embrulhados */
+.section-gallery-container {
+    max-width: 1020px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* Estilo para colunas individuais dentro da galeria */
+.gallery-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilo para itens únicos na galeria, alinhando-os ao centro e ajustando o tamanho */
+.single-item {
+    flex: 1 1 auto;
+    display: flex;
+    align-items: center;
+}
+
+/* Estilo para os itens da galeria, com altura ajustada para não sobrepor outros itens */
+.single-item .gallery-item {
+    height: calc(100% - 40px); /* Ajusta a altura para a soma das duas subseções */
+}
+
+/* Estilo para os itens individuais da galeria, incluindo tamanho, margem e transição de efeito */
+.gallery-item {
+    position: relative;
+    margin: 20px;
+    width: 300px;
+    height: 300px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+/* Estilo para imagens dentro dos itens da galeria, ajustando tamanho e efeito de transformação */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Efeito de zoom para imagens ao passar o mouse */
+.gallery-item:hover img {
+    transform: scale(1.1);
+}
+
+/* Estilo para o overlay sobre os itens da galeria, incluindo cor e transição de opacidade */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 105, 180, 0.5); /* Cor rosa com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Exibe o overlay ao passar o mouse sobre o item da galeria */
+.gallery-item:hover .overlay {
+    opacity: 1;
+}
+
+/* Estilo para o símbolo de mais dentro do overlay */
+.plus {
+    color: white;
+    font-size: 50px;
+    font-weight: bold;
+}
+
+/* Gallery Modal */
+/* Estilo para o modal da galeria, inicialmente oculto e cobrindo toda a tela */
+.gallery-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fundo preto com transparência */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o botão de fechar do modal da galeria */
+.gallery-modal .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    cursor: pointer;
+}
+
+/* Estilo para o conteúdo do modal da galeria, com rolagem horizontal */
+.gallery-content {
+    display: flex;
+    align-items: center;
+    overflow-x: scroll;
+    padding: 20px;
+}
+
+/* Estilo para imagens dentro do conteúdo do modal, ajustando tamanho e espaçamento */
+.gallery-content img {
+    margin-bottom: 20px; /* Espaçamento entre imagens na vertical */
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100%; /* Largura máxima da imagem */
+    max-width: 400px; /* Largura máxima para garantir a proporção */
+    height: auto; /* Ajusta a altura para manter a proporção */
+    max-height: 500px; /* Altura máxima para garantir que as imagens não sejam muito grandes */
+    object-fit: cover;
+    /* Adiciona uma borda mais transparente */
+    border: 5px solid rgba(0, 0, 0, 0.3); /* Borda preta com 30% de opacidade */
+}
+
+
+/* SECTION FOOTER */
+/* Estilo para a seção do rodapé, ajustando o alinhamento dos itens */
+.section-footer{
+    justify-content: end;
+}
+
+/* Estilo para o container do rodapé, incluindo altura mínima, alinhamento e padding */
+.footer-container {
+    max-width: 100vw;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Estilo para o logo dentro do rodapé, com altura definida e alinhamento */
+.footer-container-logo {
+    width: auto;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para a imagem do logo dentro do rodapé */
+.footer-container-logo-img {
+    width: auto;
+    height: 90%;
+}
+
+/* Estilo para a imagem do logo dentro do rodapé, ajustando o tamanho e preenchimento */
+.footer-container-logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 5px;
+}
+
+/* Estilo para o texto dentro do rodapé, incluindo cor, fonte, tamanho e margem */
+.footer-container-logo-txt {
+    display: flex;
+    color: #3b3d42;
+    font-family: "Lora", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Estilo para links de atribuição dentro do texto do rodapé, incluindo cor e estilo */
+.footer-container-logo-txt-assign a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: royalblue;
+    font-weight: bolder;
+}
+
+/* Estilo para links de atribuição ao passar o mouse, alterando cor e tamanho da fonte */
+.footer-container-logo-txt-assign a:hover {
+    color: rgb(26, 71, 206);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* RESPONSIVIDADE PARA TABLETS (700px - 900px) */
+/* Media query para tablets, atualmente vazia para futuras modificações */
+@media (min-width: 701px) and (max-width: 900px) {
+    /* Adicione estilos específicos para tablets aqui */
+}
+
+/* RESPONSIVIDADE PARA MÓVEIS (320px - 700px) */
+/* Ajusta estilos para dispositivos móveis, incluindo a ocultação de serviços do cabeçalho e ajustes no rodapé */
+@media (min-width: 320px) and (max-width: 700px) {
+    /* Oculta a área de serviços no cabeçalho para dispositivos móveis */
+    .gallery-content {
+        display: flex;
+        flex-direction: column;
+        overflow-y: auto;
+        overflow-x: hidden;
+        padding: 20px;
+        height: 80vh;
+    }
+
+    .gallery-content img {
+        margin-bottom: 20px;
+        width: 100%;
+        max-width: 400px;
+        height: auto;
+        max-height: 500px;
+    }
+
+    .gallery-modal .close {
+        position: fixed;
+        top: 630px;
+        left: 30px;
+        color: white;
+        font-size: 60px;
+        cursor: pointer;
+    }
+
+    .header-container-services {
+        display: none;
+    }
+
+     /* Estilo para o overlay ativado */
+     .gallery-item .overlay {
+        transition: opacity 0.3s ease;
+    }
+
+    .gallery-item img {
+        transition: opacity 0.3s ease; /* Transição para a opacidade da imagem */
+    }
+
+    .gallery-item img.active {
+        opacity: 0.5; /* Ajuste a opacidade da imagem quando o overlay estiver ativo */
+    }
+
+    .gallery-item img.active + .overlay {
+        opacity: 1; /* Torna o overlay visível quando a imagem está ativa */
+    }
+
+    /* Ajusta o rodapé para centralizar os itens e adicionar padding */
+    .footer-container {
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    /* Alinha o logo do rodapé verticalmente e ajusta o tamanho do texto */
+    .footer-container-logo {
+        flex-direction: column;
+    }
+
+    .footer-container-logo-txt {
+        font-size: 3vw;
+    }
+}
+

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt_BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D'Ellas - Bolos, Doces e Donuts</title>
+    <link rel="icon" href="../assets/logo/logo-mobile2.png" type="image/x-icon">
+    
+    <!-- Inclusão de Scripts -->
+    <!-- Biblioteca para animações de rolagem -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <!-- Script personalizado para funcionalidades da página -->
+    <script src="../js/script.js" defer></script>
+    
+    <!-- Inclusão de Estilos -->
+    <!-- Folha de estilos CSS para a página -->
+    <link rel="stylesheet" type="text/css" href="../css/gallery.css">
+</head>
+<body>
+
+    <!-- Cabeçalho da Página -->
+    <header class="section-header">
+        <div class="header-container">
+            <!-- Logo -->
+            <div class="header-container-logo">
+                <a href="../index.html" class="header-container-logo">
+                    <img src="../assets/logo/logo-desktop.png" alt="Logo">
+                </a>
+            </div>
+
+            <!-- Navegação do Cabeçalho -->
+            <div class="header-container-services">
+                <a href="../index.html">Home</a> <!-- Link para a página "Principal" -->
+                <a href="about.html">Sobre nós</a>
+                <a href="gallery.html">Galeria</a>
+                <a href="contact.html">Contato</a>
+            </div>
+        </div>
+
+        <!-- Menu Lateral -->
+        <div id="sidebar" class="sidebar">
+            <!-- Botão para fechar o menu lateral -->
+            <button class="closebtn" onclick="closeNav()">×</button>
+            <!-- Links de navegação no menu lateral -->
+            <a href="../index.html">Home</a> <!-- Link para a página "Principal" -->
+            <a href="about.html">Sobre nós</a>
+            <a href="gallery.html">Galeria</a>
+            <a href="contact.html">Contato</a>
+        </div>
+
+        <div class="header-container-section">
+            <div class="header-container-section-txt">
+                <a href="../index.html">Home</a>
+                <P>- Galeria</P>
+            </div>
+        </div>
+
+        <!-- Botão para abrir o menu lateral -->
+        <span id="openbtn" class="openbtn" onclick="openNav()">☰</span>
+    </header>
+
+    <section class="section-gallery">
+        <div class="section-gallery-tittle">
+            <h1>Galeria de fotos</h1>
+        </div>
+        <div class="section-gallery-container">
+            <div class="gallery-column">
+                <div class="gallery-item" onclick="openGallery('bolosCaseiros')">
+                    <img src="../assets/products/bolo-doisamores.png" alt="Bolos Caseiros">
+                    <div class="overlay">
+                        <div class="plus">+</div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery('sobremesas')">
+                    <img src="../assets/products/bombom-uva.png" alt="Sobremesas">
+                    <div class="overlay">
+                        <div class="plus">+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-column single-item">
+                <div class="gallery-item" onclick="openGallery('miniCakeDonuts')">
+                    <img src="../assets/products/24minicake-donuts.png" alt="Mini Cake Donuts">
+                    <div class="overlay">
+                        <div class="plus">+</div>
+                    </div>
+                </div>
+            </div>
+            <div class="gallery-column">
+                <div class="gallery-item" onclick="openGallery('boloDeFesta')">
+                    <img src="../assets/products/bolo-festa.png" alt="Bolo de Festa">
+                    <div class="overlay">
+                        <div class="plus">+</div>
+                    </div>
+                </div>
+                <div class="gallery-item" onclick="openGallery('boloGourmet')">
+                    <img src="../assets/products/bolo-gourmet.png" alt="Bolo Gourmet">
+                    <div class="overlay">
+                        <div class="plus">+</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Container de Imagens -->
+        <div id="galleryModal" class="gallery-modal">
+            <span class="close" onclick="closeGallery()">&times;</span>
+            <div class="gallery-content" id="galleryContent"></div>
+        </div>
+    </section>    
+    
+
+    <!-- Rodapé -->
+    <footer class="section-footer">
+        <div class="footer-container">
+            <div class="footer-container-logo">
+                <div class="footer-container-logo-img">
+                    <img src="../assets/logo/logo-desktop.png" alt="Logo">
+                </div>
+                <div class="footer-container-logo-txt">
+                    <div class="footer-container-logo-txt-copy">
+                        <p>Copyright © 2024. Made by</p>
+                    </div>
+                    <div class="footer-container-logo-txt-assign">
+                        <a href="https://www.linkedin.com/in/alexandro-carraro" target="_blank">Alexandro Carraro</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container-social">
+                <div class="footer-container-social-instagram"></div>                
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

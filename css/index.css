@@ -1,0 +1,700 @@
+/* IMPORTAÇÃO DE FONTE */
+/* Importa fontes externas do Google Fonts para estilização do texto */
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Lora:ital,wght@0,400..700;1,400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+/* ESTILO GLOBAL */
+/* Aplica um estilo global básico a todos os elementos */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Define a fonte e margens padrão para o corpo do documento */
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+/* HEADER AREA */
+/* Estiliza a área do cabeçalho fixo no topo da página */
+.section-header {
+    width: 100vw;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Configura o container do cabeçalho para alinhar itens e distribuir espaço */
+.header-container {
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 5px;
+}
+
+/* Estilo do logotipo no cabeçalho */
+.header-container-logo {
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Ajusta o tamanho e o ajuste da imagem do logotipo */
+.header-container-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Estilo dos links de serviços no cabeçalho */
+.header-container-services {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+}
+
+/* Estiliza os links de serviços com fonte, cor e espaçamento */
+.header-container-services a {
+    text-decoration: none;
+    margin-left: 40px;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    font-style: italic;
+    color: #333739;
+    text-transform: uppercase;
+    letter-spacing: .25px;
+}
+
+/* Altera a cor e o cursor dos links de serviços ao passar o mouse sobre eles */
+.header-container-services a:hover {
+    color: #FA6289;
+    cursor: pointer;
+    transition: 0.4s; /* Adiciona uma transição suave na cor */
+}
+
+/* MENU LATERAL */
+/* Estilo do menu lateral que aparece ao clicar no botão */
+.sidebar {
+    height: 100%;
+    width: 0; /* Inicialmente oculto */
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #ec829cc0;
+    overflow-x: hidden;
+    transition: 0.5s; /* Transição suave ao abrir e fechar */
+    padding-top: 60px;
+    z-index: 1001; /* Garante que o menu lateral esteja acima do cabeçalho */
+}
+
+/* Estilo dos links no menu lateral */
+.sidebar a {
+    padding: 8px 32px;
+    text-align: center;
+    font-size: 25px;
+    color: #f1f1f1;
+    display: block;
+    transition: 0.3s; /* Transição suave na cor dos links */
+    text-decoration: none;
+    font-family: "Lora", sans-serif;
+    font-weight: bold;
+    font-style: italic;
+    letter-spacing: .25px;
+    margin-top: 20px;
+}
+
+/* Altera a cor dos links no menu lateral ao passar o mouse sobre eles */
+.sidebar a:hover {
+    color: #FA6289;
+}
+
+/* Estilo do botão para fechar o menu lateral */
+.sidebar .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 45px;
+    margin-left: 50px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: #f1f1f1;
+    background-color: transparent;
+    border: none;
+}
+
+/* Estilo do botão para abrir o menu lateral */
+.openbtn {
+    font-size: 30px;
+    cursor: pointer;
+    color: #333739;
+    padding: 10px;
+    border: none;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    z-index: 1000; /* Garante que o botão esteja acima do menu lateral */
+}
+
+/* RESPONSIVIDADE PARA DISPOSITIVOS MAIORES */
+/* Oculta o menu lateral e o botão de abrir em telas maiores que 700px */
+@media (min-width: 701px) {
+    .sidebar {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+}
+
+/* SECTION SLIDE */
+/* Estilo da seção de slide com uma imagem de fundo */
+.section-slide {
+    margin-top: 109px;
+    height: 450px;
+    background-image: url("../assets/images/background-slide.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Container para o slide com imagem */
+.section-slide-container {
+    display: block;
+    max-width: 80vw;
+    max-height: 300px;
+    visibility: hidden; /* Oculto por padrão */
+    overflow: hidden;
+}
+
+/* Estilo da imagem dentro do container do slide */
+.section-slide-container img {
+    width: 100%;
+    height: auto;
+}
+
+/* SECTION BRIEF */
+/* Estilo da seção de descrição breve */
+.brief-description {
+    max-width: 100vw;
+    height: auto;
+    padding: 20px;
+    margin-bottom: 50px;
+}
+
+/* Container para a descrição breve com imagem e texto lado a lado */
+.brief-description-container {
+    max-width: 1200px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Margem negativa para ajustar a posição da imagem */
+.brief-description-container-img {
+    margin-top: -80px;
+}
+
+/* Estilo da imagem na descrição breve */
+.brief-description-container-img img {
+    max-width: 400px;
+    height: auto;
+}
+
+/* Área de texto na descrição breve */
+.brief-description-container-txtarea {
+    overflow: hidden;
+}
+
+/* Estilo do texto na descrição breve */
+.brief-description-container-txt {
+    max-width: 600px;
+    padding: 20px;
+    visibility: hidden; /* Oculto por padrão */
+}
+
+/* Estilo dos parágrafos dentro da descrição breve */
+.brief-description-container-txt p {
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 2.25em;
+    margin-left: 30px;
+}
+
+/* Estilo do título dentro da descrição breve */
+.brief-description-container-txt h1 {
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 2px;
+}
+
+/* SECTION PRODUCTS */
+/* Container da seção de produtos com fundo colorido e alinhamento centralizado */
+.section-products-container {
+    max-width: 100vw;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fbf6eb;
+    background-position: center;
+}
+
+/* Título da seção de produtos */
+.section-products-container-title {
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 2px;
+    margin-top: -25px;
+    visibility: hidden; /* Oculto por padrão */
+}
+
+/* Container da grade de produtos */
+.section-products-container-grid {
+    max-width: 90vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Estilo dos itens da grade de produtos */
+.grid-item {
+    max-width: 280px;
+    min-height: 550px;
+    margin: 10px;
+    background-color: white;
+    border: 1px solid rgb(243, 231, 220);
+    border-radius: 7px;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo do título dentro de cada item da grade */
+.grid-item h1 {
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 22px;
+    font-weight: 500;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
+
+/* Estilo do parágrafo dentro de cada item da grade */
+.grid-item-p{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 15vh;
+}
+
+.grid-item-p p{
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    margin-top: 30px;
+}
+.grid-item-p-ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.grid-item-ul{
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    margin-top: 10px;    
+}
+.grid-item-ul-line{
+    border: 1px solid #333739;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    margin-left: 5px;
+    margin-right: 5px;
+
+}
+.grid-item-ul li{
+    list-style-type: none;
+    text-align: left;
+}
+
+/* Estilo do subtítulo dentro de cada item da grade */
+.grid-item h2 {
+    color: #333739;
+    font-family: "Lora", sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 35px;
+    margin-bottom: 20px;
+}
+
+/* Estilo da imagem dentro de cada item da grade */
+.grid-item-img{
+    position: relative;
+}
+
+.grid-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    aspect-ratio: 1; /* Mantém a proporção da imagem */
+}
+
+/* ESTILO DO OVERLAY */
+/* Estilo do overlay que cobre a página ao ampliar a imagem */
+#overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Escurece o fundo */
+    backdrop-filter: blur(5px); /* Aplica o desfoque */
+    display: none; /* Oculta o overlay por padrão */
+    z-index: 9; /* Garante que o overlay esteja atrás da imagem ampliada */
+    transition: opacity 0.3s ease; /* Transição suave na visibilidade */
+}
+
+/* CLASSE PARA AUMENTAR A IMAGEM */
+/* Estilo da imagem ampliada dentro da grade */
+.grid-item img.enlarged {
+    transform: scale(1.7); /* Ajusta o fator de escala conforme necessário */
+    transition: transform 0.3s ease, border 0.3s ease; /* Transição suave para a borda */
+    z-index: 10; /* Garante que a imagem fique sobre o overlay */
+    position: relative; /* Garante que a imagem ampliada fique acima do overlay */
+    border: 5px solid #ec829d; /* Adiciona uma borda ao redor da imagem ampliada */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Opcional: Adiciona uma sombra para destacar a imagem */
+}
+
+/* CONTAINER DA IMAGEM PARA MANIPULAR A SOBREPOSIÇÃO */
+/* Container dos itens da grade para permitir manipulação de sobreposição */
+.grid-item {
+    position: relative;
+}
+
+/* SEÇÃO WHATSAPP */
+/* Container e estilo do botão de WhatsApp na seção de produtos */
+.section-products-container-whathsapp {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo do botão de WhatsApp */
+.section-products-container-whathsapp button {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    background-color: #ec829d;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+/* Altera a cor do botão de WhatsApp ao passar o mouse sobre ele */
+.section-products-container-whathsapp button:hover {
+    background-color: #FA6289;
+}
+
+/* Estilo do texto dentro do botão de WhatsApp */
+.button-txt {
+    color: white;
+    font-family: "Lora", sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+}
+
+.section-products-container-whathsapp {
+    position: fixed;
+    bottom: 20px; /* Ajusta a distância da parte inferior da tela */
+    right: 20px; /* Ajusta a distância da parte direita da tela */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: pulse 1s infinite;
+}
+
+/* Keyframes da animação de pulsação */
+@keyframes pulse {
+    0% {
+    transform: scale(1);
+    }
+    50% {
+    transform: scale(1.1);
+    }
+    100% {
+    transform: scale(1);
+    }
+}
+
+.section-products-container-whathsapp button {
+    width: auto; /* Mantém a largura automática */
+    padding: 5px; /* Ajusta o padding interno do botão */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.button-img {
+    width: 30px; /* Ajusta o tamanho da imagem dentro do botão */
+    height: auto; /* Mantém a proporção da imagem */
+}
+
+.button-txt {
+    font-size: 17px; /* Mantém o tamanho do texto original */
+    margin-left: 10px; /* Espaço entre a imagem e o texto */
+}
+
+/* Adiciona uma classe para o botão estar fixo apenas em dispositivos móveis */
+.fixed-whatsapp-button {
+    position: fixed;
+    bottom: 20px; /* Distância da parte inferior da tela */
+    right: 20px; /* Distância da parte direita da tela */
+    z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+    transition: all 0.3s ease; /* Adiciona uma transição suave */
+    visibility: hidden;
+}
+
+/* Estilo da imagem dentro do botão de WhatsApp */
+.button-img {
+    width: 30px;
+}
+
+.button-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 5px;
+}
+
+/* SECTION FOOTER */
+/* Container da seção de rodapé */
+.footer-container {
+    max-width: 100vw;
+    min-height: 100px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    padding: 10px;
+}
+
+/* Estilo do logotipo no rodapé */
+.footer-container-logo {
+    width: auto;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo da imagem do logotipo no rodapé */
+.footer-container-logo-img {
+    width: auto;
+    height: 90%;
+}
+
+.footer-container-logo-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    padding: 5px;
+}
+
+/* Estilo do texto do rodapé */
+.footer-container-logo-txt {
+    display: flex;
+    color: #3b3d42;
+    font-family: "Lora", sans-serif;
+    font-size: 14px;
+    font-style: italic;
+    line-height: 1.25em;
+    letter-spacing: 1px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+/* Estilo do link de atribuição no rodapé */
+.footer-container-logo-txt-assign a {
+    margin-left: 5px;
+    text-decoration: none;
+    color: royalblue;
+    font-weight: bolder;
+}
+
+/* Altera a cor e o estilo do link de atribuição ao passar o mouse sobre ele */
+.footer-container-logo-txt-assign a:hover {
+    color: rgb(26, 71, 206);
+    font-weight: bold;
+    font-size: 15px;
+}
+
+/* RESPONSIVIDADE PARA TABLETS (700px - 900px) */
+/* Ajustes para dispositivos com largura entre 701px e 900px */
+@media (min-width: 701px) and (max-width: 900px) {
+    .brief-description-container-img {
+        margin-top: 0;
+    }
+    
+    .brief-description-container-img img {
+        max-width: 300px;
+    }
+}
+
+/* RESPONSIVIDADE PARA MÓVEIS (320px - 700px) */
+/* Ajustes para dispositivos com largura entre 320px e 700px */
+@media (min-width: 320px) and (max-width: 700px) {
+    .header-container-services {
+        display: none; /* Oculta os serviços no cabeçalho em telas pequenas */
+    }
+
+    .brief-description-container {
+        display: flex;
+        flex-direction: column; /* Alinha os elementos em coluna */
+    }
+
+    .brief-description-container-img img {
+        max-width: 300px;
+    }
+
+    .section-products {
+        max-width: 100vw;
+        height: auto;
+    }
+    
+    .grid-item {
+        max-width: 100vw;
+        height: auto;   
+        min-height: 600px; 
+    }
+
+    .section-products-container-whathsapp {
+        position: fixed;
+        bottom: 20px; /* Ajusta a distância da parte inferior da tela */
+        right: 20px; /* Ajusta a distância da parte direita da tela */
+        z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: pulse 1s infinite;
+    }
+
+    /* Keyframes da animação de pulsação */
+    @keyframes pulse {
+        0% {
+        transform: scale(1);
+        }
+        50% {
+        transform: scale(1.1);
+        }
+        100% {
+        transform: scale(1);
+        }
+    }
+
+    .section-products-container-whathsapp button {
+        width: auto; /* Mantém a largura automática */
+        padding: 5px; /* Ajusta o padding interno do botão */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    }
+
+    .button-img {
+        width: 30px; /* Ajusta o tamanho da imagem dentro do botão */
+        height: auto; /* Mantém a proporção da imagem */
+    }
+    
+    .button-txt {
+        font-size: 17px; /* Mantém o tamanho do texto original */
+        margin-left: 10px; /* Espaço entre a imagem e o texto */
+    }
+
+    /* Adiciona uma classe para o botão estar fixo apenas em dispositivos móveis */
+    .fixed-whatsapp-button {
+        position: fixed;
+        bottom: 20px; /* Distância da parte inferior da tela */
+        right: 20px; /* Distância da parte direita da tela */
+        z-index: 1000; /* Garante que o botão fique acima de outros elementos */
+        transition: all 0.3s ease; /* Adiciona uma transição suave */
+        visibility: hidden;
+    }
+
+
+    .footer-container {
+        justify-content: center;
+        margin-top: 20px;
+        padding: 20px;
+    }
+
+    .footer-container-logo {
+        flex-direction: column;
+    }
+
+    .footer-container-logo-txt {
+        font-size: 3vw; /* Ajusta o tamanho da fonte para dispositivos móveis */
+    }
+    
+    .grid-item img.enlarged {
+        transform: scale(1.3); /* Reduz o fator de escala para dispositivos móveis */
+        border: none;
+    }
+}

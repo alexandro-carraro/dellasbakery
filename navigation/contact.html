@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt_BR"> <!-- Define o idioma da página como Português do Brasil -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Define a visualização em dispositivos móveis com escala inicial de 1.0 -->
+    <title>D'Ellas - Bolos, Doces e Donuts</title> <!-- Título da página, exibido na aba do navegador -->
+    <link rel="icon" href="../assets/logo/logo-mobile2.png" type="image/x-icon"> <!-- Define o ícone da aba do navegador -->
+
+    <!-- Inclusão de scripts JavaScript -->
+    <script src="https://unpkg.com/scrollreveal"></script> <!-- Biblioteca externa para animações de rolagem -->
+    <script src="../js/script.js" defer></script> <!-- Script personalizado para funcionalidades específicas da página -->
+    
+    <!-- Inclusão de estilos CSS -->
+    <link rel="stylesheet" type="text/css" href="../css/contact.css"> <!-- Estilos específicos para a página de contato -->
+</head>
+
+<body>
+
+<!-- Cabeçalho da Página -->
+<header class="section-header">
+    <div class="header-container">
+        <!-- Logo -->
+        <div class="header-container-logo">
+            <a href="../index.html" class="header-container-logo">
+                <img src="../assets/logo/logo-desktop.png" alt="Logo">
+            </a>
+        </div>
+
+        <!-- Navegação do Cabeçalho -->
+        <div class="header-container-services">
+            <a href="../index.html">Home</a> <!-- Link para a página "Principal" -->
+            <a href="about.html">Sobre nós</a>
+            <a href="gallery.html">Galeria</a>
+            <a href="contact.html">Contato</a>
+        </div>
+    </div>
+
+    <!-- Menu Lateral -->
+    <div id="sidebar" class="sidebar">
+        <!-- Botão para fechar o menu lateral -->
+        <button class="closebtn" onclick="closeNav()">×</button>
+        <!-- Links de navegação no menu lateral -->
+        <a href="../index.html">Home</a> <!-- Link para a página "Principal" -->
+        <a href="about.html">Sobre nós</a>
+        <a href="gallery.html">Galeria</a>
+        <a href="contact.html">Contato</a>
+    </div>
+
+    <div class="header-container-section">
+        <div class="header-container-section-txt">
+            <a href="../index.html">Home</a>
+            <P>- Contato</P>
+        </div>
+    </div>
+
+    <!-- Botão para abrir o menu lateral -->
+    <span id="openbtn" class="openbtn" onclick="openNav()">☰</span>
+</header>
+
+    <!-- Seção de Contato -->
+    <section class="section-contact">
+        <div class="section-contact-title">
+            <h1>Endereço e contatos</h1> <!-- Título da seção de contato -->
+        </div>
+        <div class="section-contact-container">
+            <!-- Mapa -->
+            <div class="section-contact-container-map">
+                <a href="https://www.google.com/maps/dir//residencial+rosa+minella/data=!4m6!4m5!1m1!4e2!1m2!1m1!1s0x94d8b42e4b0e1bdd:0xef23e788812c35e4?sa=X&ved=1t:3061&ictx=111" target="_blank"> <!-- Link para o Google Maps com o endereço -->
+                    <img src="../assets/images/mapa-img.PNG" alt="Mapa" class="map-image"> 
+                    <div class="overlay">Clique para ver no Google Maps</div>
+                </a>
+                
+            </div>
+            <!-- Informações de Contato -->
+            <div class="section-contact-container-contacts">
+                <p><strong>Telefone:</strong> (47) 9 9614-4717</p> <!-- Informação de telefone -->
+                <p><strong>Email:</strong> exemplo@dellas.com</p> <!-- Informação de e-mail -->
+                <p><strong>Instagram:</strong> <a href="https://www.instagram.com/dellas.doceria/" target="_blank">@dellas.doceria</a></p> <!-- Link para o perfil do Instagram -->
+                <a href="https://wa.me/5547996144717?text=Ol%C3%A1!%20Cheguei%20at%C3%A9%20aqui%20por%20meio%20do%20site,%20e%20gostaria%20de%20falar%20sobre%20os%20produtos!" class="whatsapp-button" target="_blank">Contate pelo WhatsApp!</a> <!-- Botão para iniciar uma conversa no WhatsApp -->
+            </div>
+        </div>
+    </section>
+    
+    <!-- Rodapé -->
+    <footer class="section-footer">
+        <div class="footer-container">
+            <div class="footer-container-logo">
+                <div class="footer-container-logo-img">
+                    <img src="../assets/logo/logo-desktop.png" alt="Logo"> <!-- Imagem do logo no rodapé -->
+                </div>
+                <div class="footer-container-logo-txt">
+                    <div class="footer-container-logo-txt-copy">
+                        <p>Copyright © 2024. Made by</p> <!-- Texto de copyright -->
+                    </div>
+                    <div class="footer-container-logo-txt-assign">
+                        <a href="https://www.linkedin.com/in/alexandro-carraro" target="_blank">Alexandro Carraro</a> <!-- Link para o perfil do criador -->
+                    </div>
+                </div>
+            </div>
+            <div class="footer-container-social">
+                <div class="footer-container-social-instagram"></div> <!-- Espaço reservado para ícones sociais (Instagram, etc.) -->
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
