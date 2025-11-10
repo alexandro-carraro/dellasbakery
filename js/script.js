@@ -144,7 +144,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var targetItems = []; // Cria um array para armazenar os itens-alvo.
 
     // Seleciona os itens da grade de produtos e os adiciona ao array.
-    for (let i = 1; i <= 20; i++) {
+    for (let i = 1; i <= 19; i++) {
         targetItems.push(document.querySelector('.grid-item.item' + i)); // Adiciona cada item ao array.
     }
 
